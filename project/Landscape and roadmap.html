@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Scout · Landscape and roadmap</title>
+<meta name="description" content="The competition, and what to build next — a review of nine competing apps across three categories, a capability matrix, and seven ranked recommendations for The Scout.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #f3f2f2;
+    color: #201e1d;
+    font-family: "Source Serif 4", Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: #006786; text-decoration: none; }
+  a:hover { color: #d6006c; }
+  a:focus-visible { outline: 2px solid #0088b0; outline-offset: 2px; }
+  ::selection { background: #cbeeff; }
+
+  .page { padding: 44px 52px 80px; max-width: 1320px; margin: 0 auto; }
+
+  .table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 14.5px; }
+  .table th { text-align: left; letter-spacing: .08em; text-transform: uppercase; color: rgba(32,30,29,.6); }
+  .table td { }
+  .table tbody tr:hover { background: rgba(32,30,29,.04); }
+
+  @media (max-width: 900px) {
+    .page { padding: 32px 20px 56px; }
+    h1.title { font-size: 44px !important; }
+    .grid-3 { grid-template-columns: 1fr !important; gap: 24px !important; }
+    .app-section { grid-template-columns: 1fr !important; }
+    .app-wireframe { width: 100% !important; }
+    .recs-grid, .no-build-grid { grid-template-columns: 1fr !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div style="height: 6px; background: #201e1d"></div>
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; padding: 10px 0 6px">
+    <h1 class="title" style="margin: 0; font-size: 66px; line-height: .95; font-weight: 700; letter-spacing: -.02em">The competition, and what to build next</h1>
+    <div style="text-align: right; font-size: 12.5px; line-height: 1.5; color: #605d5d; padding-bottom: 8px; flex: none">The Scout · Ontario<br>Landscape review<br>August 2026</div>
+  </div>
+  <div style="height: 1px; background: #201e1d"></div>
+  <div style="font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: #605d5d; padding: 7px 0 0">Three categories · nine apps · seven decisions</div>
+
+  <div class="grid-3" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 44px; padding: 40px 0 0">
+    <div>
+      <p style="margin: 0; font-size: 17px; line-height: 1.5; text-wrap: pretty">Nothing on the market does exactly what The Scout does, but the job is split cleanly across three categories, and each one is mature. The short answer: the light planners own precision, the spot maps own discovery, and a new crop of save-from-a-reel apps owns the social layer. None of them owns the day.</p>
+    </div>
+    <div>
+      <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #444141; text-wrap: pretty">PhotoPills is the category leader and also its cautionary tale. Photographers describe it as having the most features and the steepest curve — several keep The Photographer's Ephemeris open beside it because it opens straight onto a map instead of a menu.</p>
+    </div>
+    <div>
+      <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #444141; text-wrap: pretty">The opening for The Scout is the join: a trending spot is worthless if the light is wrong, the lot is full, or the reservation sold out. Everything recommended below serves that join, and nothing else.</p>
+    </div>
+  </div>
+
+  <div style="height: 3px; background: #201e1d; margin: 46px 0 0"></div>
+  <div style="font-size: 26px; font-weight: 700; padding: 10px 0 22px">One · Light planners</div>
+
+  <div class="app-section" style="display: grid; grid-template-columns: 320px 1fr; gap: 46px; align-items: start">
+    <div>
+      <div class="app-wireframe" style="width: 300px; height: 500px; border: 1px solid #bab6b6; background: #eae9e9; border-radius: 2px; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+        <div style="font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: #7d7979">Wireframe · map-first ephemeris</div>
+        <div style="flex: 1; position: relative; background-color: #d7d3d3; background-image: radial-gradient(#9b9797 1px, transparent 1.1px); background-size: 6px 6px; border-radius: 2px">
+          <div style="position: absolute; left: 46%; top: 52%; width: 12px; height: 12px; border-radius: 50%; background: #201e1d"></div>
+          <div style="position: absolute; left: 51%; top: 55%; width: 130px; height: 2px; background: #d6006c; transform: rotate(-28deg); transform-origin: left"></div>
+          <div style="position: absolute; left: 51%; top: 55%; width: 108px; height: 2px; background: #0088b0; transform: rotate(18deg); transform-origin: left"></div>
+          <div style="position: absolute; left: 10px; bottom: 10px; font-size: 10px; color: #444141">sunrise / sunset azimuth lines</div>
+        </div>
+        <div style="height: 34px; background: #f3f2f2; border: 1px solid #d7d3d3; border-radius: 2px; display: flex; align-items: center; padding: 0 9px; font-size: 11px; color: #605d5d">◀ time scrubber ────●──── ▶</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px">
+          <div style="height: 30px; background: #f3f2f2; border: 1px solid #d7d3d3; border-radius: 2px"></div>
+          <div style="height: 30px; background: #f3f2f2; border: 1px solid #d7d3d3; border-radius: 2px"></div>
+          <div style="height: 30px; background: #f3f2f2; border: 1px solid #d7d3d3; border-radius: 2px"></div>
+          <div style="height: 30px; background: #f3f2f2; border: 1px solid #d7d3d3; border-radius: 2px"></div>
+        </div>
+        <div style="font-size: 10.5px; color: #7d7979">rise · set · golden · blue · moon · shadow ratio</div>
+      </div>
+      <div style="font-size: 12px; color: #7d7979; padding-top: 8px; font-style: italic">My sketch of the shared pattern, not a screenshot.</div>
+    </div>
+
+    <div>
+      <div style="padding: 0 0 22px; border-bottom: 1px solid #d7d3d3; margin-bottom: 22px">
+        <div style="display: flex; align-items: baseline; gap: 12px">
+          <div style="font-size: 24px; font-weight: 700">PhotoPills</div>
+          <div style="font-size: 12px; color: #7d7979">iOS · Android · one-time purchase</div>
+        </div>
+        <p style="margin: 8px 0 0; font-size: 15.5px; line-height: 1.5; text-wrap: pretty">The reference implementation: a map planner that answers either "good location at this time" or "best date and time at this location", plus AR sun, moon and Milky Way paths and a wall of calculators.</p>
+        <div style="display: flex; gap: 26px; padding-top: 10px; flex-wrap: wrap">
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #006786">Takes</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">Plan a spot for a future date; scrub time and watch the light move.</div>
+          </div>
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #aa0b56">Leaves</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">Opens onto a menu, not a map. Photographers consistently call it feature-rich and hard to use.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 0 0 22px; border-bottom: 1px solid #d7d3d3; margin-bottom: 22px">
+        <div style="display: flex; align-items: baseline; gap: 12px">
+          <div style="font-size: 24px; font-weight: 700">The Photographer's Ephemeris</div>
+          <div style="font-size: 12px; color: #7d7979">iOS · Android · web · basic offline</div>
+        </div>
+        <p style="margin: 8px 0 0; font-size: 15.5px; line-height: 1.5; text-wrap: pretty">The older, narrower tool that keeps its users: a map-centric sun and moon calculator showing how light falls on the land, opening straight onto the map with no menu in the way.</p>
+        <div style="display: flex; gap: 26px; padding-top: 10px; flex-wrap: wrap">
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #006786">Takes</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">One screen, one job. Map on launch is the right default for a field tool.</div>
+          </div>
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #aa0b56">Leaves</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">No sense of place quality — it will happily plan a beautiful sunrise over a parking lot.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 0 0 22px; border-bottom: 1px solid #d7d3d3; margin-bottom: 22px">
+        <div style="display: flex; align-items: baseline; gap: 12px">
+          <div style="font-size: 24px; font-weight: 700">GoldenHour.One</div>
+          <div style="font-size: 12px; color: #7d7979">iOS · Android · freemium</div>
+        </div>
+        <p style="margin: 8px 0 0; font-size: 15.5px; line-height: 1.5; text-wrap: pretty">Wraps weather around the ephemeris and scores it: a Sky Index for the chance of a dramatic sky and a Light Index for the quality of light, plus a bell that sets an early reminder.</p>
+        <div style="display: flex; gap: 26px; padding-top: 10px; flex-wrap: wrap">
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #006786">Takes</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">Scoring conditions instead of listing them. A 0–10 sky number is a decision; a cloud percentage is homework.</div>
+          </div>
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #aa0b56">Leaves</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">No locations. You bring your own spot.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 0 0 22px; border-bottom: 1px solid #d7d3d3; margin-bottom: 22px">
+        <div style="display: flex; align-items: baseline; gap: 12px">
+          <div style="font-size: 24px; font-weight: 700">Sun Surveyor · PhotoTime · Skylight</div>
+          <div style="font-size: 12px; color: #7d7979">the long tail</div>
+        </div>
+        <p style="margin: 8px 0 0; font-size: 15.5px; line-height: 1.5; text-wrap: pretty">Same ground, gentler curves: rise and set, twilights, shadow ratios, moon phase, AR compass overlays, widgets and golden-hour notifications. Skylight narrows to a single question — how good will tonight look.</p>
+        <div style="display: flex; gap: 26px; padding-top: 10px; flex-wrap: wrap">
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #006786">Takes</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">Widgets and a pre-golden-hour notification are table stakes now.</div>
+          </div>
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #aa0b56">Leaves</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">Nothing about crowds, access, or what other people are shooting.</div>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #444141; text-wrap: pretty">Design language across all of them: dark map, dense numeric readouts, a time scrubber, coloured azimuth lines. Utility-grade, near-zero editorial voice, and no sense of what is worth shooting — you have to already know where you are going.</p>
+    </div>
+  </div>
+
+  <div style="height: 3px; background: #201e1d; margin: 46px 0 0"></div>
+  <div style="font-size: 26px; font-weight: 700; padding: 10px 0 22px">Two · Spot discovery</div>
+
+  <div class="app-section" style="display: grid; grid-template-columns: 320px 1fr; gap: 46px; align-items: start">
+    <div>
+      <div class="app-wireframe" style="width: 300px; height: 500px; border: 1px solid #bab6b6; background: #eae9e9; border-radius: 2px; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+        <div style="font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: #7d7979">Wireframe · photo-grid discovery</div>
+        <div style="height: 30px; background: #f3f2f2; border: 1px solid #d7d3d3; border-radius: 2px; display: flex; align-items: center; padding: 0 9px; font-size: 11px; color: #7d7979">search a city</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; flex: 1">
+          <div style="background-color: #d7d3d3; background-image: radial-gradient(#201e1d 1.1px, transparent 1.2px); background-size: 4px 4px; border-radius: 2px"></div>
+          <div style="background-color: #bab6b6; background-image: radial-gradient(#201e1d 1.1px, transparent 1.2px); background-size: 4px 4px; border-radius: 2px"></div>
+          <div style="background-color: #bab6b6; background-image: radial-gradient(#201e1d 1.1px, transparent 1.2px); background-size: 4px 4px; border-radius: 2px"></div>
+          <div style="background-color: #d7d3d3; background-image: radial-gradient(#201e1d 1.1px, transparent 1.2px); background-size: 4px 4px; border-radius: 2px"></div>
+          <div style="background-color: #d7d3d3; background-image: radial-gradient(#201e1d 1.1px, transparent 1.2px); background-size: 4px 4px; border-radius: 2px"></div>
+          <div style="background-color: #bab6b6; background-image: radial-gradient(#201e1d 1.1px, transparent 1.2px); background-size: 4px 4px; border-radius: 2px"></div>
+        </div>
+        <div style="font-size: 10.5px; color: #7d7979">tap a photo → coordinates, best time, fee, transit</div>
+      </div>
+    </div>
+
+    <div>
+      <div style="padding: 0 0 22px; border-bottom: 1px solid #d7d3d3; margin-bottom: 22px">
+        <div style="display: flex; align-items: baseline; gap: 12px">
+          <div style="font-size: 24px; font-weight: 700">Explorest</div>
+          <div style="font-size: 12px; color: #7d7979">iOS · curated and crowdsourced</div>
+        </div>
+        <p style="margin: 8px 0 0; font-size: 15.5px; line-height: 1.5; text-wrap: pretty">Built for the exact user you named: people who want the shot that performs. Spots come with GPS coordinates, hard-to-find access notes, transit instructions and weather.</p>
+        <div style="display: flex; gap: 26px; padding-top: 10px; flex-wrap: wrap">
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #006786">Takes</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">Access notes as first-class content — how to reach it, not just where it is.</div>
+          </div>
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #aa0b56">Leaves</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">Coverage is patchy outside its launch cities, and quality depends on submissions.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 0 0 22px; border-bottom: 1px solid #d7d3d3; margin-bottom: 22px">
+        <div style="display: flex; align-items: baseline; gap: 12px">
+          <div style="font-size: 24px; font-weight: 700">PhotoSpot · Photomapper</div>
+          <div style="font-size: 12px; color: #7d7979">web and mobile maps</div>
+        </div>
+        <p style="margin: 8px 0 0; font-size: 15.5px; line-height: 1.5; text-wrap: pretty">World maps of user-submitted shooting locations. Each pin carries a thumbnail, best time to visit, and entrance fee where relevant.</p>
+        <div style="display: flex; gap: 26px; padding-top: 10px; flex-wrap: wrap">
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #006786">Takes</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">Best-time-to-visit stored per spot, not computed globally.</div>
+          </div>
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #aa0b56">Leaves</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">Static. A spot is either in the database or not; nothing changes week to week.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 0 0 22px; border-bottom: 1px solid #d7d3d3; margin-bottom: 22px">
+        <div style="display: flex; align-items: baseline; gap: 12px">
+          <div style="font-size: 24px; font-weight: 700">Instagram Places and Snap Map</div>
+          <div style="font-size: 12px; color: #7d7979">the default everyone already has</div>
+        </div>
+        <p style="margin: 8px 0 0; font-size: 15.5px; line-height: 1.5; text-wrap: pretty">Tap a location tag or search a neighbourhood and see what is popular nearby, filtered by six broad categories.</p>
+        <div style="display: flex; gap: 26px; padding-top: 10px; flex-wrap: wrap">
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #006786">Takes</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">Free, universal, and where your trend data ultimately comes from.</div>
+          </div>
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #aa0b56">Leaves</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">Category filters are restaurants and cafés. There is no "waterfall at blue hour".</div>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #444141; text-wrap: pretty">The structural weakness of this category is that a spot database goes stale and a photo grid has no sense of time. None of them can tell you that the colour peaks in six days or that the lot fills at nine.</p>
+    </div>
+  </div>
+
+  <div style="height: 3px; background: #201e1d; margin: 46px 0 0"></div>
+  <div style="font-size: 26px; font-weight: 700; padding: 10px 0 22px">Three · Save-from-a-reel</div>
+
+  <div class="app-section" style="display: grid; grid-template-columns: 320px 1fr; gap: 46px; align-items: start">
+    <div>
+      <div class="app-wireframe" style="width: 300px; height: 340px; border: 1px solid #bab6b6; background: #eae9e9; border-radius: 2px; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+        <div style="font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: #7d7979">Wireframe · share-sheet import</div>
+        <div style="height: 56px; background: #f3f2f2; border: 1px solid #d7d3d3; border-radius: 2px; display: flex; align-items: center; gap: 8px; padding: 0 9px">
+          <div style="width: 30px; height: 40px; background: #bab6b6; border-radius: 1px"></div>
+          <div style="font-size: 11px; color: #444141">reel shared from Instagram</div>
+        </div>
+        <div style="font-size: 11px; color: #7d7979; text-align: center">↓ places extracted</div>
+        <div style="display: flex; flex-direction: column; gap: 6px">
+          <div style="height: 28px; background: #f3f2f2; border: 1px solid #0088b0; border-radius: 2px"></div>
+          <div style="height: 28px; background: #f3f2f2; border: 1px solid #d7d3d3; border-radius: 2px"></div>
+        </div>
+        <div style="flex: 1; background-color: #d7d3d3; background-image: radial-gradient(#9b9797 1px, transparent 1.1px); background-size: 6px 6px; border-radius: 2px"></div>
+      </div>
+    </div>
+
+    <div>
+      <div style="padding: 0 0 22px; border-bottom: 1px solid #d7d3d3; margin-bottom: 22px">
+        <div style="display: flex; align-items: baseline; gap: 12px">
+          <div style="font-size: 24px; font-weight: 700">Plotline · Stashed · JoySpot</div>
+          <div style="font-size: 12px; color: #7d7979">iOS · 2025–26 · mostly free</div>
+        </div>
+        <p style="margin: 8px 0 0; font-size: 15.5px; line-height: 1.5; text-wrap: pretty">A new category solving one thing well: share a reel to the app and it extracts every place mentioned and pins it to your map. Plotline reports over a million places mapped from social posts.</p>
+        <div style="display: flex; gap: 26px; padding-top: 10px; flex-wrap: wrap">
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #006786">Takes</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">The share sheet as the primary input. This is how spots actually enter a creator’s life — from a reel, not a search.</div>
+          </div>
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #aa0b56">Leaves</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">The map is a graveyard. Once pinned, nothing tells you when to go or whether it is still worth going.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 0 0 22px; border-bottom: 1px solid #d7d3d3; margin-bottom: 22px">
+        <div style="display: flex; align-items: baseline; gap: 12px">
+          <div style="font-size: 24px; font-weight: 700">Atlas Obscura</div>
+          <div style="font-size: 12px; color: #7d7979">editorial, web and app</div>
+        </div>
+        <p style="margin: 8px 0 0; font-size: 15.5px; line-height: 1.5; text-wrap: pretty">The counterweight to trend: unusual places largely ignored by Instagram, written up with a real voice.</p>
+        <div style="display: flex; gap: 26px; padding-top: 10px; flex-wrap: wrap">
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #006786">Takes</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">Editorial authority. One well-written paragraph beats twelve data points.</div>
+          </div>
+          <div style="min-width: 200px">
+            <div style="font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase; color: #aa0b56">Leaves</div>
+            <div style="font-size: 14px; line-height: 1.45; padding-top: 3px">Deliberately not current, and not about photography.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 3px; background: #201e1d; margin: 46px 0 0"></div>
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; padding: 10px 0 6px; flex-wrap: wrap; gap: 8px">
+    <div style="font-size: 26px; font-weight: 700">Where The Scout sits</div>
+    <div style="font-size: 12.5px; color: #605d5d; padding-bottom: 4px">× built · ○ planned, see recommendations 01–03</div>
+  </div>
+  <div style="overflow-x: auto">
+  <table class="table">
+    <thead>
+      <tr>
+        <th style="text-align: left; padding: 9px 8px; border-bottom: 2px solid #201e1d; font-weight: 600; width: 30%">Capability</th>
+        <th style="padding: 9px 4px; border-bottom: 2px solid #201e1d; font-weight: 600; font-size: 12px; line-height: 1.18; text-align: center; width: 10%; overflow-wrap: anywhere; hyphens: auto">PhotoPills</th>
+        <th style="padding: 9px 4px; border-bottom: 2px solid #201e1d; font-weight: 600; font-size: 12px; line-height: 1.18; text-align: center; width: 10%; overflow-wrap: anywhere; hyphens: auto">Ephemeris</th>
+        <th style="padding: 9px 4px; border-bottom: 2px solid #201e1d; font-weight: 600; font-size: 12px; line-height: 1.18; text-align: center; width: 10%; overflow-wrap: anywhere; hyphens: auto">GoldenHour</th>
+        <th style="padding: 9px 4px; border-bottom: 2px solid #201e1d; font-weight: 600; font-size: 12px; line-height: 1.18; text-align: center; width: 10%; overflow-wrap: anywhere; hyphens: auto">Explorest</th>
+        <th style="padding: 9px 4px; border-bottom: 2px solid #201e1d; font-weight: 600; font-size: 12px; line-height: 1.18; text-align: center; width: 10%; overflow-wrap: anywhere; hyphens: auto">PhotoSpot</th>
+        <th style="padding: 9px 4px; border-bottom: 2px solid #201e1d; font-weight: 600; font-size: 12px; line-height: 1.18; text-align: center; width: 10%; overflow-wrap: anywhere; hyphens: auto">Plotline</th>
+        <th style="padding: 9px 4px; border-bottom: 2px solid #201e1d; font-weight: 700; font-size: 12px; line-height: 1.18; text-align: center; width: 10%; overflow-wrap: anywhere; hyphens: auto; color: #aa0b56">The Scout</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; width: 30%">Sunrise, sunset, golden and blue hour</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #201e1d; font-weight: 700; font-size: 17px">×</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #201e1d; font-weight: 700; font-size: 17px">×</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #201e1d; font-weight: 700; font-size: 17px">×</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #d6006c; font-weight: 700; font-size: 17px; opacity: 1">×</td>
+      </tr>
+      <tr>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; width: 30%">Sun and moon direction on a map</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #201e1d; font-weight: 700; font-size: 17px">×</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #201e1d; font-weight: 700; font-size: 17px">×</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #201e1d; font-weight: 700; font-size: 17px">×</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #d6006c; font-weight: 700; font-size: 14px; opacity: .75">○</td>
+      </tr>
+      <tr>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; width: 30%">Sky and cloud forecast for the shoot</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #201e1d; font-weight: 700; font-size: 17px">×</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #d6006c; font-weight: 700; font-size: 14px; opacity: .75">○</td>
+      </tr>
+      <tr>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; width: 30%">Where is worth shooting at all</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #201e1d; font-weight: 700; font-size: 17px">×</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #201e1d; font-weight: 700; font-size: 17px">×</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #d6006c; font-weight: 700; font-size: 17px; opacity: 1">×</td>
+      </tr>
+      <tr>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; width: 30%">Trending right now</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #d6006c; font-weight: 700; font-size: 17px; opacity: 1">×</td>
+      </tr>
+      <tr>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; width: 30%">Seasonal peak — colour, ice, melt</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #d6006c; font-weight: 700; font-size: 17px; opacity: 1">×</td>
+      </tr>
+      <tr>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; width: 30%">Crowd, permit and parking reality</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #201e1d; font-weight: 700; font-size: 17px">×</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #d6006c; font-weight: 700; font-size: 17px; opacity: 1">×</td>
+      </tr>
+      <tr>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; width: 30%">A route ordered by the light</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #d6006c; font-weight: 700; font-size: 17px; opacity: 1">×</td>
+      </tr>
+      <tr>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; width: 30%">Import a place from a reel</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #bab6b6; font-weight: 400; font-size: 15px">·</td>
+        <td style="padding: 9px 4px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #201e1d; font-weight: 700; font-size: 17px">×</td>
+        <td style="padding: 9px 8px; border-bottom: 1px solid #d7d3d3; text-align: center; width: 10%; color: #d6006c; font-weight: 700; font-size: 14px; opacity: .75">○</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="margin: 14px 0 0; font-size: 15px; line-height: 1.55; max-width: 760px; text-wrap: pretty">Three rows are ours alone today: trend, season and route. Three are open circles. The recommendations below buy the two rows we are visibly missing — sky conditions and light direction — without buying the whole PhotoPills feature list, which is what made it hard to use.</p>
+
+  <div style="height: 3px; background: #201e1d; margin: 46px 0 0"></div>
+  <div style="font-size: 26px; font-weight: 700; padding: 10px 0 4px">What I recommend adding</div>
+  <p style="margin: 0 0 26px; font-size: 15px; color: #605d5d; max-width: 720px">Four new screens and three additions to screens that already exist. Ranked; I would build them in this order.</p>
+
+  <div class="recs-grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 44px">
+    <div style="border-top: 1px solid #201e1d; padding-top: 12px">
+      <div style="display: flex; align-items: baseline; gap: 10px">
+        <div style="font-size: 30px; font-weight: 700; line-height: 1; color: #d6006c">01</div>
+        <div style="flex: 1">
+          <div style="font-size: 20px; font-weight: 700; line-height: 1.15">Conditions</div>
+          <div style="font-size: 11px; letter-spacing: .09em; text-transform: uppercase; color: #7d7979; padding-top: 3px">New screen</div>
+        </div>
+      </div>
+      <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.5; text-wrap: pretty">A sky score for the next seven days at one spot, in the language of the app rather than a weather app: cloud cover shaped into a Sky Index, wind for the drone, mist probability at the falls, and a strip that names the best day of the week to go. Notifications ride on this — one push, forty-five minutes before the window, only when the score is worth the drive.</p>
+      <div style="font-size: 13.5px; line-height: 1.45; color: #006786; padding-top: 8px">Why: This is the single most common feature across every light planner, and the only capability where we would look thin next to a free competitor.</div>
+    </div>
+
+    <div style="border-top: 1px solid #201e1d; padding-top: 12px">
+      <div style="display: flex; align-items: baseline; gap: 10px">
+        <div style="font-size: 30px; font-weight: 700; line-height: 1; color: #d6006c">02</div>
+        <div style="flex: 1">
+          <div style="font-size: 20px; font-weight: 700; line-height: 1.15">Light direction</div>
+          <div style="font-size: 11px; letter-spacing: .09em; text-transform: uppercase; color: #7d7979; padding-top: 3px">New screen</div>
+        </div>
+      </div>
+      <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.5; text-wrap: pretty">The sun-path overlay on one spot: which way the light arrives at golden hour, when the gorge wall stops shading the water, and how the frame changes across the day, with a scrubber. Compass-based AR is a later addition, not a launch requirement.</p>
+      <div style="font-size: 13.5px; line-height: 1.45; color: #006786; padding-top: 8px">Why: The reason people pay for PhotoPills and Ephemeris. Without it, an experienced creator will keep a second app open.</div>
+    </div>
+
+    <div style="border-top: 1px solid #201e1d; padding-top: 12px">
+      <div style="display: flex; align-items: baseline; gap: 10px">
+        <div style="font-size: 30px; font-weight: 700; line-height: 1; color: #d6006c">03</div>
+        <div style="flex: 1">
+          <div style="font-size: 20px; font-weight: 700; line-height: 1.15">Save from a reel</div>
+          <div style="font-size: 11px; letter-spacing: .09em; text-transform: uppercase; color: #7d7979; padding-top: 3px">New screen</div>
+        </div>
+      </div>
+      <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.5; text-wrap: pretty">The share-sheet import: send a reel into The Scout, it identifies the location, matches it to a spot we already track, and offers it straight into a collection or today’s route with the light times already attached.</p>
+      <div style="font-size: 13.5px; line-height: 1.45; color: #006786; padding-top: 8px">Why: This is the bridge nobody has built. The save-from-a-reel apps pin a dot; we would pin a dot that knows when to shoot it.</div>
+    </div>
+
+    <div style="border-top: 1px solid #201e1d; padding-top: 12px">
+      <div style="display: flex; align-items: baseline; gap: 10px">
+        <div style="font-size: 30px; font-weight: 700; line-height: 1; color: #d6006c">04</div>
+        <div style="flex: 1">
+          <div style="font-size: 20px; font-weight: 700; line-height: 1.15">Before you go</div>
+          <div style="font-size: 11px; letter-spacing: .09em; text-transform: uppercase; color: #7d7979; padding-top: 3px">New screen</div>
+        </div>
+      </div>
+      <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.5; text-wrap: pretty">One page of friction, per spot: permit or reservation status with a booking link, parking fill forecast by hour, gate times, fees, trail closures, cell coverage, washrooms, and how much of the walk is on rock. Dundas Peak is reservation-only; the Grotto parking is a four-hour commitment. That belongs on its own page, not in a footnote.</p>
+      <div style="font-size: 13.5px; line-height: 1.45; color: #006786; padding-top: 8px">Why: Ontario-specific and genuinely hard to assemble. It is also the most defensible content moat in the product.</div>
+    </div>
+
+    <div style="border-top: 1px solid #201e1d; padding-top: 12px">
+      <div style="display: flex; align-items: baseline; gap: 10px">
+        <div style="font-size: 30px; font-weight: 700; line-height: 1; color: #d6006c">05</div>
+        <div style="flex: 1">
+          <div style="font-size: 20px; font-weight: 700; line-height: 1.15">Go somewhere else</div>
+          <div style="font-size: 11px; letter-spacing: .09em; text-transform: uppercase; color: #7d7979; padding-top: 3px">New screen</div>
+        </div>
+      </div>
+      <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.5; text-wrap: pretty">When a spot is peaking, crowded or reservation-locked, the app offers two alternates within thirty minutes that hold the same light and the same subject — the Hilton Falls move, made systematic.</p>
+      <div style="font-size: 13.5px; line-height: 1.45; color: #006786; padding-top: 8px">Why: Turns the crowding problem the app creates into a feature, and gives casual users a reason to trust it over the trend itself.</div>
+    </div>
+
+    <div style="border-top: 1px solid #201e1d; padding-top: 12px">
+      <div style="display: flex; align-items: baseline; gap: 10px">
+        <div style="font-size: 30px; font-weight: 700; line-height: 1; color: #d6006c">06</div>
+        <div style="flex: 1">
+          <div style="font-size: 20px; font-weight: 700; line-height: 1.15">Frame saturation</div>
+          <div style="font-size: 11px; letter-spacing: .09em; text-transform: uppercase; color: #7d7979; padding-top: 3px">Addition to spot detail</div>
+        </div>
+      </div>
+      <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.5; text-wrap: pretty">Alongside the momentum figure, how many recent reels use the same composition — and which angles are underexposed. A rising spot shot from one bridge is a warning, not an invitation.</p>
+      <div style="font-size: 13.5px; line-height: 1.45; color: #006786; padding-top: 8px">Why: The creators chasing views need the frame nobody has, not the place everybody has.</div>
+    </div>
+
+    <div style="border-top: 1px solid #201e1d; padding-top: 12px">
+      <div style="display: flex; align-items: baseline; gap: 10px">
+        <div style="font-size: 30px; font-weight: 700; line-height: 1; color: #d6006c">07</div>
+        <div style="flex: 1">
+          <div style="font-size: 20px; font-weight: 700; line-height: 1.15">Weather re-plan and offline</div>
+          <div style="font-size: 11px; letter-spacing: .09em; text-transform: uppercase; color: #7d7979; padding-top: 3px">Addition to the route</div>
+        </div>
+      </div>
+      <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.5; text-wrap: pretty">When the forecast turns, the route re-sorts and says so, with the rainy-day collection already loaded. The day’s route, light times and access notes cache for offline — most of these spots have no signal.</p>
+      <div style="font-size: 13.5px; line-height: 1.45; color: #006786; padding-top: 8px">Why: The planners all treat offline as a feature. For an escarpment route it is a requirement.</div>
+    </div>
+  </div>
+
+  <div style="height: 3px; background: #201e1d; margin: 50px 0 0"></div>
+  <div style="font-size: 26px; font-weight: 700; padding: 10px 0 18px">And two things I would not build</div>
+  <div class="no-build-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 44px; max-width: 980px">
+    <div>
+      <div style="font-size: 19px; font-weight: 600">Photography calculators</div>
+      <p style="margin: 7px 0 0; font-size: 15px; line-height: 1.5; text-wrap: pretty">Depth of field, hyperfocal distance, exposure tables. This is what makes the incumbents feel like instruments. Reels are shot on phones; the calculator audience already owns PhotoPills.</p>
+    </div>
+    <div>
+      <div style="font-size: 19px; font-weight: 600">A social feed with follows and comments</div>
+      <p style="margin: 7px 0 0; font-size: 15px; line-height: 1.5; text-wrap: pretty">Instagram is the feed. Creator co-signs are a ranking signal on a location, not a timeline. Keep the profile as a body of work, not a place to post.</p>
+    </div>
+  </div>
+
+  <div style="height: 3px; background: #201e1d; margin: 50px 0 0"></div>
+  <div style="font-size: 26px; font-weight: 700; padding: 10px 0 4px">One risk worth naming</div>
+  <p style="margin: 0; font-size: 16px; line-height: 1.55; max-width: 780px; text-wrap: pretty">An app that ranks Ontario by reel volume accelerates exactly the crowding it reports. The Cheltenham Badlands were closed for years because of foot traffic on the shale. The design already hints at the answer — Hilton Falls surfaced as the quiet alternative to a booked-out Dundas Peak — and recommendation five makes it a rule rather than a coincidence. It is also the most defensible thing about the product: a trend app that knows when to send you somewhere else.</p>
+
+</div>
+
+</body>
+</html>
