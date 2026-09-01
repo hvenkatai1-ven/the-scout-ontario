@@ -1,4 +1,8 @@
 export default function Detail({ cur, go, nextLightLabel, countdown, lightRows, addToRoute }) {
+  const linkPill = {
+    padding: '8px 12px', fontSize: 13, fontFamily: 'inherit', border: '1px solid #d7d3d3',
+    borderRadius: 2, background: 'transparent', color: '#006786', display: 'flex', alignItems: 'center', gap: 6
+  };
   return (
     <div style={{ flex: 1, overflow: 'auto' }}>
       <div style={{ position: 'relative', height: 268, background: '#d7d3d3' }}>
@@ -29,7 +33,7 @@ export default function Detail({ cur, go, nextLightLabel, countdown, lightRows, 
           </div>
         ))}
 
-        <div style={{ display: 'flex', gap: 26, padding: '20px 0 0' }}>
+        <div style={{ display: 'flex', gap: 22, padding: '20px 0 0', flexWrap: 'wrap' }}>
           <div>
             <div style={{ fontSize: 10.5, letterSpacing: '.09em', textTransform: 'uppercase', color: '#7d7979' }}>Crowd now</div>
             <div style={{ fontSize: 20, fontWeight: 600, paddingTop: 3 }}>{cur.crowd}</div>
@@ -42,12 +46,28 @@ export default function Detail({ cur, go, nextLightLabel, countdown, lightRows, 
             <div style={{ fontSize: 10.5, letterSpacing: '.09em', textTransform: 'uppercase', color: '#7d7979' }}>Season</div>
             <div style={{ fontSize: 20, fontWeight: 600, paddingTop: 3 }}>{cur.seasonState}</div>
           </div>
+          <div>
+            <div style={{ fontSize: 10.5, letterSpacing: '.09em', textTransform: 'uppercase', color: '#7d7979' }}>Same angle</div>
+            <div style={{ fontSize: 20, fontWeight: 600, color: cur.sameAngle >= 50 ? '#aa0b56' : '#201e1d', paddingTop: 3 }}>{cur.sameAngle}%</div>
+          </div>
         </div>
+        <div style={{ fontSize: 12.5, color: '#7d7979', paddingTop: 6, fontStyle: 'italic' }}>{cur.angleNote}</div>
 
         <div style={{ display: 'flex', alignItems: 'flex-end', gap: 3, height: 54, padding: '20px 0 0' }}>
           {cur.chart.map((b, i) => <div key={i} style={b.style}></div>)}
         </div>
         <div style={{ fontSize: 11.5, color: '#7d7979', paddingTop: 6 }}>Reels posted, twelve weeks</div>
+
+        {cur.crowd === 'Heavy' && (
+          <button onClick={go('goElse')} style={{
+            display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', marginTop: 18,
+            padding: '12px 14px', background: '#ffdee6', border: 'none', borderRadius: 2, fontFamily: 'inherit',
+            fontSize: 13.5, color: '#aa0b56', textAlign: 'left'
+          }}>
+            <span>This spot is heavily crowded right now — see alternates</span>
+            <span>→</span>
+          </button>
+        )}
 
         <div style={{ display: 'flex', gap: 9, padding: '22px 0 0' }}>
           <button onClick={addToRoute} style={{ flex: 1, padding: 14, background: '#0088b0', color: '#fff', border: 'none', borderRadius: 2, fontSize: 15, fontWeight: 600, fontFamily: 'inherit' }}>Add to today’s route</button>
@@ -56,6 +76,13 @@ export default function Detail({ cur, go, nextLightLabel, countdown, lightRows, 
             borderRadius: 2, fontSize: 15, fontFamily: 'inherit', display: 'flex', alignItems: 'center', gap: 6
           }}><i className="ph-duotone ph-camera" style={{ fontSize: 18 }}></i>Framing</button>
         </div>
+
+        <div style={{ display: 'flex', gap: 8, paddingTop: 12, flexWrap: 'wrap' }}>
+          <button onClick={go('conditions')} style={linkPill}><i className="ph-duotone ph-cloud-sun" style={{ fontSize: 16 }}></i>Conditions</button>
+          <button onClick={go('lightDirection')} style={linkPill}><i className="ph-duotone ph-compass" style={{ fontSize: 16 }}></i>Light direction</button>
+          <button onClick={go('beforeYouGo')} style={linkPill}><i className="ph-duotone ph-info" style={{ fontSize: 16 }}></i>Before you go</button>
+        </div>
+
         <div style={{ fontSize: 12.5, color: '#7d7979', padding: '12px 0 0', fontStyle: 'italic' }}>{cur.access}</div>
       </div>
     </div>

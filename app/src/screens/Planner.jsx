@@ -1,4 +1,4 @@
-export default function Planner({ routeStats, itinerary, go }) {
+export default function Planner({ routeStats, itinerary, go, weatherReplanned, toggleWeatherReplan }) {
   return (
     <div style={{ flex: 1, overflow: 'auto', padding: 'calc(var(--safe-top) + 18px) 20px 12px' }}>
       <div style={{ height: 4, background: '#201e1d' }}></div>
@@ -7,6 +7,26 @@ export default function Planner({ routeStats, itinerary, go }) {
         <div style={{ fontSize: 12, color: '#605d5d', paddingBottom: 3 }}>{routeStats}</div>
       </div>
       <div style={{ height: 1, background: '#201e1d' }}></div>
+
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, padding: '10px 0 0' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#605d5d' }}>
+          <i className="ph-duotone ph-cloud-check" style={{ fontSize: 15 }}></i>Route, light times and access notes cached for offline
+        </div>
+      </div>
+
+      {weatherReplanned && (
+        <div style={{
+          display: 'flex', alignItems: 'center', gap: 10, marginTop: 10, padding: '11px 13px',
+          background: '#e9f8ff', borderRadius: 2, fontSize: 13, color: '#006786'
+        }}>
+          <i className="ph-duotone ph-cloud-rain" style={{ fontSize: 18, flex: 'none' }}></i>
+          Forecast turned — route re-sorted, rainy-day collection loaded.
+        </div>
+      )}
+      <button onClick={toggleWeatherReplan} style={{
+        border: 'none', background: 'none', color: '#7d7979', fontSize: 11.5, fontFamily: 'inherit',
+        padding: '8px 0 0', textDecoration: 'underline', cursor: 'pointer'
+      }}>{weatherReplanned ? 'Undo simulated forecast change' : 'Simulate a forecast change'}</button>
 
       {itinerary.map((i, idx) => (
         <div key={idx} style={{ display: 'flex', gap: 14, padding: '15px 0 0' }}>

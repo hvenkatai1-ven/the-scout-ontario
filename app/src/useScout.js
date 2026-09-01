@@ -45,6 +45,8 @@ export function useScout() {
   const [crowdOnly, setCrowdOnly] = useState(true);
   const [toast, setToast] = useState('');
   const toastTimer = useRef(null);
+  const [weatherReplanned, setWeatherReplanned] = useState(false);
+  const [notifyConditions, setNotifyConditions] = useState(false);
 
   useEffect(() => {
     const id = setInterval(() => setNow(new Date()), 1000);
@@ -123,11 +125,26 @@ export function useScout() {
 
   const segPicked = seg === 'Region' ? region : seg === 'Season' ? season : vibe;
 
-  const addToRoute = useCallback(() => {
-    const name = cur.name;
+  const addSpotToRoute = useCallback((name) => {
     setRoute(r => (r.includes(name) ? r : r.concat(name)));
-    say(cur.name + ' added — route re-sorted to keep its light window');
-  }, [cur.name, say]);
+    say(name + ' added — route re-sorted to keep its light window');
+  }, [say]);
+
+  const addToRoute = useCallback(() => addSpotToRoute(cur.name), [addSpotToRoute, cur.name]);
+
+  // Recommendation 05 — Go somewhere else: two alternates that hold the same
+  // light and subject, ranked by lowest crowd then highest momentum.
+  const alternatesFor = useCallback((spotName) => {
+    return spots
+      .filter(x => x.name !== spotName)
+      .slice()
+      .sort((a, b) => {
+        const crowdRank = { Low: 0, Moderate: 1, Heavy: 2 };
+        if (crowdRank[a.crowd] !== crowdRank[b.crowd]) return crowdRank[a.crowd] - crowdRank[b.crowd];
+        return b.delta - a.delta;
+      })
+      .slice(0, 2);
+  }, [spots]);
 
   const toggleInterest = useCallback((label) => {
     setInterests(cur => cur.includes(label) ? cur.filter(x => x !== label) : cur.concat(label));
@@ -144,7 +161,7 @@ export function useScout() {
     dateline: DATELINE, seasonHeadline: SEASON_HEADLINE, countdown,
     nextLightLabel: nx.e.label, goldenWindow: '18:24–19:11', blueWindow: '19:11–19:38',
 
-    showTabs: !['onboarding', 'framing', 'detail'].includes(screen),
+    showTabs: !['onboarding', 'framing', 'detail', 'conditions', 'lightDirection', 'saveReel', 'beforeYouGo', 'goElse'].includes(screen),
     toast,
 
     interests, toggleInterest, interestCount: interests.length,
@@ -174,7 +191,26 @@ export function useScout() {
 
     itinerary,
     routeStats: routeSpots.length + ' stops · 284 km',
-    addToRoute,
+    addToRoute, addSpotToRoute,
+    alternatesFor,
+
+    weatherReplanned,
+    toggleWeatherReplan: () => {
+      setWeatherReplanned(w => {
+        const next = !w;
+        say(next ? 'Forecast turned — route re-sorted, rainy-day collection loaded' : 'Forecast holding — route back to its original order');
+        return next;
+      });
+    },
+
+    notifyConditions,
+    toggleNotifyConditions: () => {
+      setNotifyConditions(n => {
+        const next = !n;
+        say(next ? 'Notifying 45 min before the window, only when it’s worth the drive' : 'Notifications off');
+        return next;
+      });
+    },
 
     reels: REEL_VIEWS,
     cosigns: COSIGNS,

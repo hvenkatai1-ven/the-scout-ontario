@@ -25,6 +25,11 @@ export default function Saved({ collections, go }) {
         width: '100%', marginTop: 20, padding: 13, background: 'none', border: '1px solid #0088b0',
         color: '#006786', borderRadius: 2, fontSize: 14.5, fontFamily: 'inherit'
       }}>Build a route from a list</button>
+
+      <button onClick={go('saveReel')} style={{
+        width: '100%', marginTop: 10, padding: 13, background: 'none', border: 'none',
+        color: '#006786', fontSize: 14.5, fontFamily: 'inherit', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6
+      }}><i className="ph-duotone ph-share-network" style={{ fontSize: 17 }}></i>Save from a reel</button>
     </div>
   );
 }

@@ -10,6 +10,11 @@ import Saved from './screens/Saved.jsx';
 import Planner from './screens/Planner.jsx';
 import Profile from './screens/Profile.jsx';
 import Framing from './screens/Framing.jsx';
+import Conditions from './screens/Conditions.jsx';
+import LightDirection from './screens/LightDirection.jsx';
+import SaveFromReel from './screens/SaveFromReel.jsx';
+import BeforeYouGo from './screens/BeforeYouGo.jsx';
+import GoElsewhere from './screens/GoElsewhere.jsx';
 
 const SCREENS = {
   onboarding: Onboarding,
@@ -21,6 +26,11 @@ const SCREENS = {
   planner: Planner,
   profile: Profile,
   framing: Framing,
+  conditions: Conditions,
+  lightDirection: LightDirection,
+  saveReel: SaveFromReel,
+  beforeYouGo: BeforeYouGo,
+  goElse: GoElsewhere,
 };
 
 export default function App() {
