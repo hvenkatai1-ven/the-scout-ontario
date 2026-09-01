@@ -1,0 +1,12 @@
+{
+  "name": "The Scout · Ontario",
+  "short_name": "The Scout",
+  "description": "A day-planning app for trending Ontario photo spots.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f3f2f2",
+  "theme_color": "#f3f2f2",
+  "icons": [
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
