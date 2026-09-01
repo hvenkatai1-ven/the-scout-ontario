@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import {
   DATA, EVENTS, SEG_OPTION_SETS, COLLECTIONS, REEL_VIEWS, COSIGNS,
-  MAP_FILTERS, PIN_POSITIONS, SEASON_HEADLINE, DATELINE, TABS
+  MAP_FILTERS, pinPositionFor, SEASON_HEADLINE, DATELINE, TABS
 } from './data.js';
 
 const pad = (n) => String(n).padStart(2, '0');
@@ -87,15 +87,18 @@ export function useScout() {
     };
   }, [spots, spot]);
 
-  const pins = useMemo(() => spots.map((x, i) => ({
+  const pins = useMemo(() => spots.map((x) => {
+    const [leftPct, topVal] = pinPositionFor(x.name);
+    return {
     n: x.idx, hot: x.hot, open: x.open,
     style: {
-      position: 'absolute', left: PIN_POSITIONS[i][0] + '%', top: 130 + PIN_POSITIONS[i][1] * 4.6, width: 30, height: 30,
+      position: 'absolute', left: leftPct + '%', top: 130 + topVal * 4.6, width: 30, height: 30,
       borderRadius: '50%', border: 'none', fontFamily: 'inherit', fontSize: 12, fontWeight: 600, zIndex: 2,
       background: x.hot ? '#d6006c' : '#0088b0', color: '#fff', display: 'flex', alignItems: 'center',
       justifyContent: 'center', boxShadow: '0 1px 2px rgba(45,43,43,.3)'
     }
-  })), [spots]);
+    };
+  }), [spots]);
 
   const routeSpots = useMemo(() => route.map(n => spots.find(x => x.name === n)).filter(Boolean), [route, spots]);
 
